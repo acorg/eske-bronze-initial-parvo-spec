@@ -8,7 +8,7 @@
         {
             "collect": true,
             "cwd": "04-panel",
-            "dependencies": ["diamond"],
+            "dependencies": ["start"],
             "name": "panel",
             "script": "04-panel/sbatch.sh"
         },
@@ -18,14 +18,6 @@
             "dependencies": ["panel"],
             "name": "stop",
             "script": "06-stop/sbatch.sh"
-        },
-        {
-            "collect": true,
-            "cwd": "07-error",
-            "dependencies": ["start", "panel", "stop"],
-            "error step": true,
-            "name": "error",
-            "script": "07-error/sbatch.sh"
         }
     ]
 }
